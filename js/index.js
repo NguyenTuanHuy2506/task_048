@@ -5,13 +5,29 @@ $('.emp-slick').slick({
   	autoplay: true,
   	autoplaySpeed: 2000,
   	prevArrow: '<button class="slick-prev" aria-label="Previous" type="button"></button>',
-  	nextArrow: '<button class="slick-next" aria-label="Next" type="button"></button>'
+  	nextArrow: '<button class="slick-next" aria-label="Next" type="button"></button>',
+  	responsive: [
+    {
+      breakpoint: 1023,
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 1
+      }
+    },
+    {
+      breakpoint: 768,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1
+      }
+    }
+    ]
 });
 
 //----------hambuger button-------//
 var _menuOpen = 0;
 $('.hambuger-button').click(function(){
-	var _this = $(this);
+	let _this = $(this);
 	var _menu = $('.header__drop-menu');
 	if(_menuOpen == 0)
 	{
@@ -26,7 +42,6 @@ $('.hambuger-button').click(function(){
 		else{
 			return false;
 		}
-		
 	}
 	else{
 		if(_this.hasClass('active')){
@@ -37,22 +52,55 @@ $('.hambuger-button').click(function(){
 				_menu.removeClass('bounceOutLeft');
 				_menuOpen = 0;}, 1000)();
 		}
-		else {return false;}
+		else {
+			return false;
+		}
 	}		
 });
 
 
-$('.drop-menu__item > h3 >.nav-link').click(function(e){
+var _menuSubOpen = 0;
+$('.drop-menu__item > h3 > .nav-link').click(function(e){
 
-	var _o = $(this).parents('.drop-menu__item');
-	console.log(_o);
-	if(_o.hasClass('active')){
-		_o.removeClass('active');
+	var _ts = $(this).parents('.drop-menu__item');
+	var _menuSub = _ts.find('.drop-menu__sub');
+
+	if(!_ts.hasClass('active')){
+		$('.drop-menu__item.active').find('.drop-menu__sub').toggle('slow');
+		$('.drop-menu__item.active').removeClass('active');
+		delayF(function(){
+			_menuSub.toggle('fast');
+			_ts.addClass('active');
+		},300)();
 	}
 	else{
-		_o.addClass('active');
 		
+		delayF(function(){
+			_menuSub.toggle('fast');
+			_ts.removeClass('active');
+		},300)();
 	}
+	// else{
+	// 	if(_ts.hasClass('active')){
+	// 		_menuSub.toggle('slow');
+	// 		delayF(function(){
+	// 			_ts.removeClass('active');
+	// 			_menuSubOpen = 0;
+	// 			}, 1000)();
+	// 	}
+	// 	else {
+	// 		console.log('asdf')
+	// 		$('.drop-menu__item.active > .drop-menu__sub').toggle('slow', function(){
+	// 			_menuSub.toggle('slow');
+	// 			_ts.addClass('active');
+	// 			$('.drop-menu__item.active').removeClass('active');
+	// 			_menuSubOpen = 0;
+	// 		});
+			
+			
+	// 		return false;
+	// 	}
+	// }		
 });
 
 

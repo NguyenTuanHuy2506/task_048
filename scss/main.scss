@@ -15,7 +15,14 @@
 ==============*/
 .mv{
 	width: 100%;
+	margin-top: 12rem;
 	position: relative;
+	overflow: hidden;
+
+	@include mobile{
+		margin-top: 6rem;
+	}
+
 	&__content{
 		position: absolute;
 		left: 15vw;
@@ -27,9 +34,30 @@
 		background-color: #fff;
 		padding: 1.5rem 1.8rem;
 		padding-right: 0;
+
+		@include ippadpro{
+			font-size: 5rem;
+			letter-spacing: 0;
+		}
+
+		@include mobile{
+			bottom: 0;
+			left: 0;
+			right: 0;
+			padding: 2rem 2rem;
+		}
+
+		@media only screen and (max-width: 767px){
+			background-color: rgba(#fff, .5);
+			font-size: 2.1rem;
+		}
 	}
 	img{
 		width: 100%;
+		
+		@include mobile{
+			width: 120%;
+		}
 	}
 }
 
@@ -77,12 +105,23 @@
 	position: relative;
 	background-color: #9cd8d4;
 	padding: 8rem 0;
+
+	@include mobile{
+		padding: 2rem 0;
+	}
 	
 	&__heading{
 		position: absolute;
 		top: 10.5rem;
 		left: 2.5%;
 		z-index: 4;
+
+		@include mobile{
+			position: relative;
+			top: 0;
+			left: 0;
+			padding: 1rem 2rem;
+		}
 
 		.title{
 			margin: 0;
@@ -91,6 +130,10 @@
 
 		.more-button{
 			margin-top: 3rem;
+
+			@include mobile{
+				margin-top: 1rem;
+			}
 		}
 	}
 }
@@ -100,12 +143,23 @@
 	padding: 0 5rem;
 	position: relative;
 
+	@include mobile{
+		margin-top: 2rem;
+		padding: 0 2rem;
+	}
+
 	.slick-prev,
 	.slick-next{
 		height: 6rem;
 		width: 6rem;
 		background-color: #fff;
 		z-index: 10;
+		
+		@include mobile{
+			width: 4rem;
+			height: 4rem;
+		}
+
 		&::before{
 			content: '';
 			width: 2rem;
@@ -116,11 +170,20 @@
 			border-bottom: none;
 			position: absolute;
 
+			@include mobile{
+				width: 1.2rem;
+				height: 1.2rem;
+			}
 		}
 	}
 
 	.slick-prev{
 		left: 0;
+
+		@include mobile{
+			left: 2rem;
+		}
+
 		&::before{
 			left: 50%;
 			top: 50%;
@@ -130,6 +193,11 @@
 
 	.slick-next{
 		right: 0;
+		
+		@include mobile{
+			right: 2rem;
+		}
+
 		&::before{
 			right: 50%;
 			top: 50%;
@@ -178,6 +246,11 @@
 			font-weight: bold;
 			color: #fff;
 			line-height: 2.9rem;
+
+			@include mobile{
+				font-size: 1.6rem;
+				line-height: 1.9rem;
+			}
 		}
 	}
 
@@ -218,9 +291,9 @@
 		top: 50%;
 		left: 0;
 		padding-left: 4.75%;
-		// padding-top: 5%;
 		transform: translateY(-50%);
 		z-index: 12;
+
 		h3{
 			font-size: 8rem;
 			line-height: 8rem;
@@ -228,6 +301,11 @@
 			font-family: 'Raleway', sans-serif;
 			color: #fff;
 			letter-spacing: .4rem;
+
+			@include mobile{
+				font-size: 4.5rem;
+				line-height: 4.5rem;
+			}
 		}
 	}
 	
@@ -236,7 +314,9 @@
 	}
 
 	&__img{
+		width: 100%;
 		position: relative;
+		overflow: hidden;
 		
 		&::after{
 			content: '';
@@ -250,6 +330,12 @@
 
 		img{
 			width: 100%;
+
+			@include mobile{
+				width: auto;
+				height: 100%;
+				object-fit: cover;
+			}
 		}
 	}
 }
@@ -261,8 +347,15 @@
 	width: 100%;
 	background-color: #9cd8d4;
 	padding: 6rem 0;
+
 	&__wrap{
 		display: flex;
+	
+		@include mobile{
+			flex-direction: column;
+			padding: 0 2rem;
+		}
+
 		li{
 			position: relative;
 			width: 100%;
@@ -271,6 +364,10 @@
 			font-weight: bold;
 			font-size: 2rem;
 			color: #f4fafe;
+
+			@include mobile{
+				font-size: 1.6rem;
+			}
 		}
 	}
 	&__wrap1{
@@ -286,8 +383,12 @@
 				margin-right: 2rem;
 			}
 
+			@include mobile{
+				margin-right: 0 !important;
+				margin: 1rem 0;	
+			}
+
 			h6{
-				
 				letter-spacing: .2rem;
 			}
 			
@@ -296,9 +397,18 @@
 	&__wrap2{
 		margin-top: 6rem;
 
+		@include mobile{
+			margin-top: 0;
+		}
+
 		li{
 			&:not(:last-child){
 				margin-right: 6rem;
+			}
+
+			@include mobile{
+				margin-right: 0 !important;
+				margin: 1rem 0;	
 			}
 
 			&::after{

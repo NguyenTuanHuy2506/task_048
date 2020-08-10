@@ -61,6 +61,11 @@ body>main {
     border: .1rem solid $c-main-color;
     margin-left: 2rem;
     transition: all .3s ease;
+
+    @include ippadpro{
+        margin-bottom: 2rem;
+    }
+
     &:hover{
         opacity: .8;
     }
@@ -74,8 +79,17 @@ body>main {
     width: 100%;
     display: flex;
     align-items: flex-start;
+    
+    @include mobile{
+        flex-direction: column;
+    }
+
     &.reverse{
         flex-direction: row-reverse;
+
+        @include mobile{
+            flex-direction: column;
+        }
     }
 }
 
@@ -86,6 +100,10 @@ body>main {
     &.first-child{
         width: 1rem;
         min-width: 40%;
+        
+        @include mobile{
+            width: 100%;
+        }
 
         .last-child::after{
             content: '';
@@ -137,16 +155,30 @@ body>main {
         bottom: 0;
         z-index: 2;
 
+        @include mobile{
+            padding: 1rem 2rem;
+
+        }
+
     }
 
     .last-child{
         width: 100%;
         position: relative;
+
+        @include mobile{
+            height: 40rem;
+        }
+
         img{
             transition: all 2s ease;
             width: 100%;
             height: 100%;
             object-fit: cover;
+
+            @include mobile{
+                width: 120%;
+            }
         }
 
     }
@@ -164,10 +196,17 @@ body>main {
 .title{
     font-size: 4rem;
     margin-top: 2rem;
+
+    @include ippadpro{
+        font-size: 3rem;
+    }
+
+    @include mobile{
+        font-size: 2.4rem;
+    }
 }
 
 .sub-title{
-
     font-size: 2rem;
     padding-top: 2rem;
     padding-bottom: 2rem;
@@ -180,6 +219,10 @@ body>main {
         position: absolute;
         bottom: 0;
         left: 0;
+    }
+
+    @include mobile{
+        font-size: 1.6rem;
     }
 }
 
