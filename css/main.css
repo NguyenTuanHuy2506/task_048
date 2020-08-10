@@ -1,0 +1,294 @@
+/*============== font family
+
+	font-family: 'Source Sans Pro', sans-serif;
+	font-family: 'Raleway', sans-serif;
+==============*/
+/*==============
+	mv css
+==============*/
+.mv {
+  width: 100%;
+  position: relative;
+}
+.mv__content {
+  position: absolute;
+  left: 15vw;
+  bottom: 35%;
+  font-weight: bold;
+  color: #449999;
+  font-size: 6rem;
+  letter-spacing: 0.15rem;
+  background-color: #fff;
+  padding: 1.5rem 1.8rem;
+  padding-right: 0;
+}
+.mv img {
+  width: 100%;
+}
+
+/*==============
+	finance
+==============*/
+.finance {
+  width: 100%;
+}
+.finance .common-box__child:not(:first-child) > .last-child::after {
+  background-color: rgba(68, 153, 153, 0.2);
+}
+
+/*==============
+	jd
+==============*/
+.job-description {
+  width: 100%;
+}
+.job-description .common-box__child:not(:first-child) > .last-child::after {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+/*==============
+	special
+==============*/
+.special {
+  width: 100%;
+}
+.special .common-box__child:not(:first-child) > .last-child::after {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+/*==============
+	employee-intro 
+==============*/
+.employee-intro {
+  width: 100%;
+  position: relative;
+  background-color: #9cd8d4;
+  padding: 8rem 0;
+}
+.employee-intro__heading {
+  position: absolute;
+  top: 10.5rem;
+  left: 2.5%;
+  z-index: 4;
+}
+.employee-intro__heading .title {
+  margin: 0;
+  letter-spacing: 0.5rem;
+}
+.employee-intro__heading .more-button {
+  margin-top: 3rem;
+}
+
+.emp-slick {
+  width: 100%;
+  padding: 0 5rem;
+  position: relative;
+}
+.emp-slick .slick-prev,
+.emp-slick .slick-next {
+  height: 6rem;
+  width: 6rem;
+  background-color: #fff;
+  z-index: 10;
+}
+.emp-slick .slick-prev::before,
+.emp-slick .slick-next::before {
+  content: "";
+  width: 2rem;
+  height: 2rem;
+  border-top: 0.2rem solid #e26046;
+  border-left: 0.2rem solid #e26046;
+  border-right: none;
+  border-bottom: none;
+  position: absolute;
+}
+.emp-slick .slick-prev {
+  left: 0;
+}
+.emp-slick .slick-prev::before {
+  left: 50%;
+  top: 50%;
+  transform: translate(-25%, -50%) rotate(-45deg);
+}
+.emp-slick .slick-next {
+  right: 0;
+}
+.emp-slick .slick-next::before {
+  right: 50%;
+  top: 50%;
+  transform: translate(25%, -50%) rotate(135deg);
+}
+.emp-slick .slick-list {
+  width: 100%;
+}
+.emp-slick__item {
+  position: relative;
+  margin-left: 3rem;
+  margin-right: 3rem;
+}
+.emp-slick__item li:first-child::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(226, 96, 70, 0.8);
+}
+.emp-slick__item li:first-child img {
+  width: 100%;
+}
+.emp-slick__title, .emp-slick__detail {
+  position: absolute;
+}
+.emp-slick__title {
+  top: 50%;
+  left: 0;
+  right: 0;
+  transform: translateY(-50%);
+  text-align: center;
+}
+.emp-slick__title h6 {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #fff;
+  line-height: 2.9rem;
+}
+.emp-slick__detail {
+  font-weight: bold;
+  font-size: 1.4rem;
+  left: 2rem;
+  bottom: 2rem;
+}
+.emp-slick__detail span {
+  display: table;
+  padding: 0.5rem 0.8rem;
+  color: #e26046;
+  background-color: #fff;
+  border-top-right-radius: 0.6rem;
+  margin-top: 0.6rem;
+  letter-spacing: 0.2rem;
+}
+
+/*==============
+	office tour
+==============*/
+.office-tour {
+  width: 100%;
+  margin: 6rem 0;
+}
+.office-tour__content {
+  width: 100%;
+  position: relative;
+}
+.office-tour__title {
+  width: 100%;
+  max-width: 38rem;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  padding-left: 4.75%;
+  transform: translateY(-50%);
+  z-index: 12;
+}
+.office-tour__title h3 {
+  font-size: 8rem;
+  line-height: 8rem;
+  font-weight: bold;
+  font-family: "Raleway", sans-serif;
+  color: #fff;
+  letter-spacing: 0.4rem;
+}
+.office-tour .more-button {
+  margin-top: 2rem;
+}
+.office-tour__img {
+  position: relative;
+}
+.office-tour__img::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+.office-tour__img img {
+  width: 100%;
+}
+
+/*==============
+	employment
+==============*/
+.employment {
+  width: 100%;
+  background-color: #9cd8d4;
+  padding: 6rem 0;
+}
+.employment__wrap {
+  display: flex;
+}
+.employment__wrap li {
+  position: relative;
+  width: 100%;
+}
+.employment__wrap h6 {
+  font-weight: bold;
+  font-size: 2rem;
+  color: #f4fafe;
+}
+.employment__wrap1 li {
+  height: 12rem;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #449999;
+}
+.employment__wrap1 li:not(:last-child) {
+  margin-right: 2rem;
+}
+.employment__wrap1 li h6 {
+  letter-spacing: 0.2rem;
+}
+.employment__wrap2 {
+  margin-top: 6rem;
+}
+.employment__wrap2 li:not(:last-child) {
+  margin-right: 6rem;
+}
+.employment__wrap2 li::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.employment__wrap2 li h6 {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  width: 100%;
+  text-align: center;
+  margin: 0 auto;
+  transform: translateY(-50%);
+  z-index: 12;
+}
+.employment__wrap2 li img {
+  width: 100%;
+}
+
+/*==============
+
+==============*/
+/*==============
+
+==============*/
+/*==============
+
+==============*/
+
+/*# sourceMappingURL=main.css.map */
