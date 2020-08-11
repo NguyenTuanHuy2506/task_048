@@ -50,7 +50,7 @@ body>main {
 ==============*/
 .entry-button{
     min-width: 14rem;
-    height: 4rem;
+    min-height: 4rem;
     font-size: 2rem;
     font-family: 'Source Sans Pro', sans-serif;
     color: #fff;
@@ -63,10 +63,9 @@ body>main {
     transition: all .3s ease;
 
     @include ippadpro{
+        margin-top: auto;
+        margin-left: 0;
         margin-bottom: 2rem;
-    }
-    
-    @include mobile{
         min-width: 100%;
         border-radius: 0;
     }

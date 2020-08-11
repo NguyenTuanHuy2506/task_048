@@ -84,16 +84,18 @@
 		left: 0;
 		padding: 0 2rem;
 		z-index: 1020;
-		flex-wrap: wrap;
+		flex-direction: column;
 		background-color: rgba(#f1f1f1, 1);
 		box-shadow: 0 .5rem 1rem 0 rgba(#1f1f1f, .5);
 		overflow-y: auto;
 		margin-bottom: 0;
 
+
 	}
 
 	@include mobile{
 		top: 6rem;
+		text-align: center;
 	}
 
 	&.active{
@@ -128,6 +130,11 @@
 				bottom: 0;
 				left: 0;
 				transition: all .3s ease;
+
+				@include mobile{
+					right: 0;
+					margin: 0 auto;
+				}
 			}
 
 			.nav-link{
@@ -140,6 +147,9 @@
 			
 			h3::after{
 				width: 100%;
+				@include mobile{
+					width: 50%;
+				}
 			}
 			@media only screen and (min-width: 1025px){
 				.drop-menu__sub{
@@ -182,6 +192,10 @@
 			padding-left: 4rem;
 		}
 
+		@include mobile{
+			padding-left: 0;
+		}
+
 		&::before{
 			content: '';
 			height: 2rem;
@@ -201,7 +215,7 @@
 			transition: all .3s ease;
 			&:hover{
 				padding-left: 1.5rem;
-				background-color: rgba(#f1f1f1, .8);
+				background-color: rgba(#333, .2);
 			}
 		}
 
