@@ -390,14 +390,14 @@
     margin: 1rem 0;
   }
 }
-.employment__wrap2 li::after {
+.employment__wrap2 li:first-child::after {
   content: "";
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.4);
 }
 .employment__wrap2 li h6 {
   position: absolute;

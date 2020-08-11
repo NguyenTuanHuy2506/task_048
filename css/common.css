@@ -64,6 +64,12 @@ body > main {
     margin-bottom: 2rem;
   }
 }
+@media screen and (max-width: 768px) {
+  .entry-button {
+    min-width: 100%;
+    border-radius: 0;
+  }
+}
 .entry-button:hover {
   opacity: 0.8;
 }
@@ -159,11 +165,6 @@ body > main {
   height: 100%;
   object-fit: cover;
 }
-@media screen and (max-width: 768px) {
-  .common-box__child .last-child img {
-    width: 120%;
-  }
-}
 
 /*==============
    title
@@ -235,6 +236,7 @@ body > main {
   text-transform: uppercase;
   position: relative;
   font-size: 1.4rem;
+  margin-top: 2.2rem;
   font-family: "Source Sans Pro", sans-serif;
   transition: all 0.3s ease;
 }
@@ -285,7 +287,7 @@ body > main {
   display: none;
   align-items: center;
   justify-content: space-around;
-  z-index: 1020;
+  z-index: 1000;
   transition: all 0.3s ease;
 }
 .to-top-button.active {
@@ -331,7 +333,7 @@ body > main {
   right: -1.8rem;
 }
 .double-rect::before {
-  top: 25%;
+  top: 30%;
   right: -1.5rem;
 }
 

@@ -65,6 +65,11 @@ body>main {
     @include ippadpro{
         margin-bottom: 2rem;
     }
+    
+    @include mobile{
+        min-width: 100%;
+        border-radius: 0;
+    }
 
     &:hover{
         opacity: .8;
@@ -175,10 +180,6 @@ body>main {
             width: 100%;
             height: 100%;
             object-fit: cover;
-
-            @include mobile{
-                width: 120%;
-            }
         }
 
     }
@@ -253,6 +254,7 @@ body>main {
     text-transform: uppercase;
     position: relative;
     font-size: 1.4rem;
+    margin-top: 2.2rem;
     font-family: 'Source Sans Pro', sans-serif;
     transition: all .3s ease;
 
@@ -306,7 +308,7 @@ body>main {
     display: none;
     align-items: center;
     justify-content: space-around;
-    z-index: 1020;
+    z-index: 1000;
     transition: all .3s ease;
     &.active{
         display: flex;
@@ -347,7 +349,7 @@ body>main {
     }
 
     &::before{
-        top: 25%;
+        top: 30%;
         right: -1.5rem;
     }
 }

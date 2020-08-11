@@ -38,6 +38,9 @@
 		letter-spacing: .1rem;
 		position: relative;
 		margin-top: 1.5rem;
+		display: flex;
+		justify-content: center;
+		align-items: center;
 		
 		@include ippadpro{
 			margin-top: 0;
