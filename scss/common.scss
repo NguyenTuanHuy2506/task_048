@@ -326,9 +326,31 @@ body>main {
 }
 
 /*==============
-   a
+   double rect
 ==============*/
+.double-rect{
+    position: relative;
 
+    &::after,
+    &::before{
+        content: '';
+        width: 1rem;
+        height: .9rem;
+        background-color: #333;
+        border: .1rem solid #fff;
+        position: absolute;
+    }
+
+    &::after{
+        top: 15%;
+        right: -1.8rem;
+    }
+
+    &::before{
+        top: 25%;
+        right: -1.5rem;
+    }
+}
 
 /*==============
    a

@@ -32,12 +32,12 @@ $('.hambuger-button').click(function(){
 	if(_menuOpen == 0)
 	{
 		if(!_this.hasClass('active')){
-			_menu.addClass('active');
-			_menu.addClass('bounceInLeft');
+			console.log('aasd');
+			_menu.addClass('active').addClass('bounceInLeft');
 			_this.addClass('active');
 			delayF(function(){
 				_menuOpen = 1;
-				_menu.removeClass('bounceInLeft')}, 1000)();
+				_menu.removeClass('bounceInLeft')}, 800)();
 		}
 		else{
 			return false;
@@ -45,12 +45,13 @@ $('.hambuger-button').click(function(){
 	}
 	else{
 		if(_this.hasClass('active')){
+			console.log('123213asd');
+
 			_menu.addClass('bounceOutLeft');
 			delayF(function(){
 				_this.removeClass('active');
-				_menu.removeClass('active');
-				_menu.removeClass('bounceOutLeft');
-				_menuOpen = 0;}, 1000)();
+				_menu.removeClass('active').removeClass('bounceOutLeft');
+				_menuOpen = 0;}, 800)();
 		}
 		else {
 			return false;

@@ -313,8 +313,28 @@ body > main {
 }
 
 /*==============
-   a
+   double rect
 ==============*/
+.double-rect {
+  position: relative;
+}
+.double-rect::after, .double-rect::before {
+  content: "";
+  width: 1rem;
+  height: 0.9rem;
+  background-color: #333;
+  border: 0.1rem solid #fff;
+  position: absolute;
+}
+.double-rect::after {
+  top: 15%;
+  right: -1.8rem;
+}
+.double-rect::before {
+  top: 25%;
+  right: -1.5rem;
+}
+
 /*==============
    a
 ==============*/
