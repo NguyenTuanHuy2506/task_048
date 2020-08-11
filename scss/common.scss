@@ -248,10 +248,12 @@ body>main {
     background-color: transparent;
     border: .1rem solid $c-sub-main-color;
     outline: none !important;
-    line-height: 3rem;
+    line-height: 2rem;
     text-align: left;
     text-transform: uppercase;
     position: relative;
+    font-size: 1.4rem;
+    font-family: 'Source Sans Pro', sans-serif;
     transition: all .3s ease;
 
     &::before{
@@ -291,9 +293,37 @@ body>main {
 }
 
 /*==============
-   a
+   to top button
 ==============*/
 
+.to-top-button{
+    position: fixed;
+    width: 5rem;
+    height: 5rem;
+    background-color: #c01920;
+    right: 5rem;
+    bottom: 5rem;
+    display: none;
+    align-items: center;
+    justify-content: space-around;
+    z-index: 1020;
+    transition: all .3s ease;
+    &.active{
+        display: flex;
+    }
+    @include mobile{
+        right: 3rem;
+        bottom: 3rem;
+    }
+    span{
+        width: 3rem;
+        height: .2rem;
+        background-color: #fff;
+        &:nth-child(1){transform: translateX(.4rem) rotate(-45deg);}
+        &:nth-child(2){transform: translateX(-.4rem) rotate(45deg);}
+    }
+    &:hover{opacity: .8;}
+}
 
 /*==============
    a
