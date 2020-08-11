@@ -1,4 +1,5 @@
 node_modules
 images/
 assets/
-
+.sass-cahe/
+app/
