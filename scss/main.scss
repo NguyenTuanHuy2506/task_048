@@ -34,7 +34,10 @@
 		background-color: #fff;
 		padding: 1.5rem 1.8rem;
 		padding-right: 0;
-
+		@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+		   line-height: .5;
+		   padding-top: 4rem;
+		}
 		@include ippadpro{
 			font-size: 5rem;
 			letter-spacing: 0;

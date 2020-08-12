@@ -63,7 +63,7 @@ body>main {
     transition: all .3s ease;
 
     @include ippadpro{
-        margin-top: auto;
+        margin-top: 2rem;
         margin-left: 0;
         margin-bottom: 2rem;
         min-width: 100%;
@@ -261,7 +261,7 @@ body>main {
         content: '';
         position: absolute;
         top: 0;
-        left: 0;
+        right: 0;
         width: 100%;
         height: 100%;
         background-color: $c-sub-main-color;
@@ -284,7 +284,6 @@ body>main {
         background-color: #fff;
         color: $c-sub-main-color;
         &::before{
-            left: 100%;
             width: 0;
         }
         &::after{

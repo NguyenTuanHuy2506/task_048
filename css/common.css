@@ -61,7 +61,7 @@ body > main {
 }
 @media screen and (max-width: 1024px) {
   .entry-button {
-    margin-top: auto;
+    margin-top: 2rem;
     margin-left: 0;
     margin-bottom: 2rem;
     min-width: 100%;
@@ -242,7 +242,7 @@ body > main {
   content: "";
   position: absolute;
   top: 0;
-  left: 0;
+  right: 0;
   width: 100%;
   height: 100%;
   background-color: #e26046;
@@ -265,7 +265,6 @@ body > main {
   color: #e26046;
 }
 .more-button:hover::before {
-  left: 100%;
   width: 0;
 }
 .more-button:hover::after {

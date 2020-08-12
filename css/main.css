@@ -29,6 +29,12 @@
   padding: 1.5rem 1.8rem;
   padding-right: 0;
 }
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+  .mv__content {
+    line-height: 0.5;
+    padding-top: 4rem;
+  }
+}
 @media screen and (max-width: 1024px) {
   .mv__content {
     font-size: 5rem;

@@ -83,16 +83,19 @@
     padding: 0 2rem;
     z-index: 1020;
     flex-direction: column;
+    justify-content: flex-start;
     background-color: #f1f1f1;
     box-shadow: 0 0.5rem 1rem 0 rgba(31, 31, 31, 0.5);
     overflow-y: auto;
     margin-bottom: 0;
+    text-align: center;
+    padding-top: 2rem;
   }
 }
 @media screen and (max-width: 768px) {
   .header__drop-menu {
     top: 6rem;
-    text-align: center;
+    padding-top: 0;
   }
 }
 .header__drop-menu.active {
@@ -119,7 +122,6 @@
   transition: all 0.3s ease;
 }
 .header__drop-menu .drop-menu__item h3::after {
-  content: "";
   width: 0;
   height: 0.2rem;
   background-color: #449999;
@@ -128,32 +130,24 @@
   left: 0;
   transition: all 0.3s ease;
 }
-@media screen and (max-width: 768px) {
+@media only screen and (min-width: 1025px) {
   .header__drop-menu .drop-menu__item h3::after {
-    right: 0;
-    margin: 0 auto;
+    content: "";
   }
 }
 .header__drop-menu .drop-menu__item h3 .nav-link {
   z-index: 1020;
-}
-.header__drop-menu .drop-menu__item:hover h3::after {
-  width: 100%;
-}
-@media screen and (max-width: 768px) {
-  .header__drop-menu .drop-menu__item:hover h3::after {
-    width: 50%;
-  }
 }
 @media only screen and (min-width: 1025px) {
   .header__drop-menu .drop-menu__item:hover .drop-menu__sub {
     display: flex;
   }
 }
-@media screen and (max-width: 1024px) {
-  .header__drop-menu .drop-menu__item:hover h3 {
-    padding-left: 2.5rem;
-  }
+.header__drop-menu .drop-menu__item:hover h3 {
+  opacity: 0.8;
+}
+.header__drop-menu .drop-menu__item:hover h3::after {
+  width: 100%;
 }
 .header__drop-menu .drop-menu__item.active .drop-menu__sub {
   display: flex;
@@ -182,7 +176,7 @@
 }
 @media screen and (max-width: 768px) {
   .header__drop-menu .drop-menu__sub {
-    padding-left: 0;
+    padding-left: 2rem;
   }
 }
 .header__drop-menu .drop-menu__sub::before {
@@ -203,8 +197,7 @@
   transition: all 0.3s ease;
 }
 .header__drop-menu .drop-menu__sub li:hover {
-  padding-left: 1.5rem;
-  background-color: rgba(51, 51, 51, 0.2);
+  padding-left: 1.8rem;
 }
 .header__drop-menu .drop-menu__sub.active {
   display: flex;
