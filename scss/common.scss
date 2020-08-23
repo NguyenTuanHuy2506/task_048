@@ -160,9 +160,15 @@ body>main {
         z-index: 2;
 
         @include mobile{
-            padding: 1rem 2rem;
-
+            padding: 2rem 2rem;
+            display: flex;
+            flex-direction: column;
+            .more-button{
+                margin-top: auto;
+            }
         }
+
+        
 
     }
 

@@ -32,7 +32,6 @@ $('.hambuger-button').click(function(){
 	if(_menuOpen == 0)
 	{
 		if(!_this.hasClass('active')){
-			console.log('aasd');
 			_menu.addClass('active').addClass('bounceInLeft');
 			_this.addClass('active');
 			delayF(function(){
@@ -45,7 +44,6 @@ $('.hambuger-button').click(function(){
 	}
 	else{
 		if(_this.hasClass('active')){
-			console.log('123213asd');
 
 			_menu.addClass('bounceOutLeft');
 			delayF(function(){

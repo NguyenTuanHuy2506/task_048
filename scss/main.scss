@@ -21,6 +21,7 @@
 
 	@include mobile{
 		margin-top: 6rem;
+		height: 62.5vw;
 	}
 
 	&__content{
@@ -44,22 +45,24 @@
 		}
 
 		@include mobile{
-			bottom: 0;
+			bottom: 2rem;
 			left: 0;
 			right: 0;
+			background-color: rgba(#fff, .5);
 			padding: 2rem 2rem;
 		}
 
 		@media only screen and (max-width: 767px){
-			background-color: rgba(#fff, .5);
-			font-size: 2.1rem;
+			
+			font-size: calc((100vw / 320) * 16);
 		}
 	}
 	img{
 		width: 100%;
 		
 		@include mobile{
-			width: 120%;
+			height: 100%;
+			object-fit: cover;
 		}
 	}
 }
